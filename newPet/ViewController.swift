@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var happinessBar: UIProgressView!
@@ -17,6 +17,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var hungerBar: UIProgressView!
     
     var mainPet = yourPet()
+    
+    func namePet(){
+        print("namePet ran")
+        let alert = UIAlertController(title: "Name your new pet!", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Fido"
+        }
+        let okAction = UIAlertAction(title: "Go!", style: .default) { (action) in
+            self.mainPet.petName = alert.textFields![0].text!
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+        nameLabel.text = mainPet.petName
+    }
+    
     
     func killPet(){
         var deathMessage = ""
@@ -27,7 +42,7 @@ class ViewController: UIViewController {
             deathMessage = "Your pet died of starvation."
         }
         else if(mainPet.reasonForDeath == "hungerHigh"){
-            deathMessage = "Your pet died of starvation."
+            deathMessage = "Your pet died of overfeeding."
         }
         else if(mainPet.reasonForDeath == "happinessLow"){
             deathMessage = "Your pet died of sadness."
@@ -54,6 +69,7 @@ class ViewController: UIViewController {
         }
         else if(mainPet.checkDeath()){
             killPet()
+            namePet()
         }
     }
     
@@ -66,6 +82,7 @@ class ViewController: UIViewController {
         }
         else if(mainPet.checkDeath()){
             killPet()
+            namePet()
         }
     }
     
@@ -75,14 +92,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        namePet()
+    }
+    
 }
 
