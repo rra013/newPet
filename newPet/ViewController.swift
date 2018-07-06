@@ -18,6 +18,33 @@ class ViewController: UIViewController {
     
     var mainPet = yourPet()
     
+    func killPet(){
+        var deathMessage = ""
+        if(mainPet.reasonForDeath == "doubleDeath"){
+            deathMessage = "Your pet died of starvation AND unhappiness!!!"
+        }
+        else if(mainPet.reasonForDeath == "hungerLow"){
+            deathMessage = "Your pet died of starvation."
+        }
+        else if(mainPet.reasonForDeath == "hungerHigh"){
+            deathMessage = "Your pet died of starvation."
+        }
+        else if(mainPet.reasonForDeath == "happinessLow"){
+            deathMessage = "Your pet died of sadness."
+        }
+        else if(mainPet.reasonForDeath == "happinessHigh"){
+            deathMessage = "Your pet died of overexcitement."
+        }
+        let alert = UIAlertController(title: "Oops!", message: deathMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.mainPet = yourPet()
+            self.happinessBar.setProgress(Float(self.mainPet.happinessFloat), animated: true)
+            self.hungerBar.setProgress(Float(self.mainPet.hungerFloat), animated: true)
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func feedPressed(_ sender: Any) {
         mainPet.feed()
         if(!mainPet.checkDeath()){
@@ -26,30 +53,7 @@ class ViewController: UIViewController {
             hungerBar.setProgress(Float(mainPet.hungerFloat), animated: true)
         }
         else if(mainPet.checkDeath()){
-            var deathMessage = ""
-            if(mainPet.reasonForDeath == "doubleDeath"){
-                deathMessage = "Your pet died of starvation AND unhappiness!!!"
-            }
-            else if(mainPet.reasonForDeath == "hungerLow"){
-                deathMessage = "Your pet died of starvation."
-            }
-            else if(mainPet.reasonForDeath == "hungerHigh"){
-                deathMessage = "Your pet died of starvation."
-            }
-            else if(mainPet.reasonForDeath == "happinessLow"){
-                deathMessage = "Your pet died of sadness."
-            }
-            else if(mainPet.reasonForDeath == "happinessHigh"){
-                deathMessage = "Your pet died of overexcitement."
-            }
-            let alert = UIAlertController(title: "Oops!", message: deathMessage, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                self.mainPet = yourPet()
-                self.happinessBar.setProgress(Float(self.mainPet.happinessFloat), animated: true)
-                self.hungerBar.setProgress(Float(self.mainPet.hungerFloat), animated: true)
-            }
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
+            killPet()
         }
     }
     
@@ -61,29 +65,7 @@ class ViewController: UIViewController {
             hungerBar.setProgress(Float(mainPet.hungerFloat), animated: true)
         }
         else if(mainPet.checkDeath()){
-            //if died
-            var deathMessage = ""
-            if(mainPet.reasonForDeath == "doubleDeath"){
-                deathMessage = "Your pet died of starvation AND unhappiness!!!"
-            }
-            else if(mainPet.reasonForDeath == "hungerLow"){
-                deathMessage = "Your pet died of starvation."
-            }
-            else if(mainPet.reasonForDeath == "hungerHigh"){
-                deathMessage = "Your pet died of starvation."
-            }
-            else if(mainPet.reasonForDeath == "happinessLow"){
-                deathMessage = "Your pet died of sadness."
-            }
-            else if(mainPet.reasonForDeath == "happinessHigh"){
-                deathMessage = "Your pet died of overexcitement."
-            }
-            let alert = UIAlertController(title: "Oops!", message: deathMessage, preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                
-            }
-            alert.addAction(okAction)
-            present(alert, animated: true, completion: nil)
+            killPet()
         }
     }
     
