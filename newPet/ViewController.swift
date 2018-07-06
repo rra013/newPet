@@ -94,6 +94,7 @@ class ViewController: UIViewController {
         if(mainPet.petName == ""){
             namePet()
         }
+        nameLabel.frame.size.width = view.frame.size.width
     }
     
     override func viewDidLoad() {
