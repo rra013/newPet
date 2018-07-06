@@ -16,7 +16,7 @@ class yourPet{
     var reasonForDeath: String = ""
     var blissAttained = false
     init() {
-        petName = "your pet"
+        petName = ""
         happinessFloat = 0.5
         hungerFloat = 0.5
         reasonForDeath = ""

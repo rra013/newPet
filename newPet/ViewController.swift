@@ -26,10 +26,11 @@ class ViewController: UIViewController {
         }
         let okAction = UIAlertAction(title: "Go!", style: .default) { (action) in
             self.mainPet.petName = alert.textFields![0].text!
+            self.nameLabel.text = self.mainPet.petName
         }
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
-        nameLabel.text = mainPet.petName
+        print(mainPet.petName)
     }
     
     
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
             self.mainPet = yourPet()
             self.happinessBar.setProgress(Float(self.mainPet.happinessFloat), animated: true)
             self.hungerBar.setProgress(Float(self.mainPet.hungerFloat), animated: true)
+            self.namePet()
         }
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
@@ -69,7 +71,6 @@ class ViewController: UIViewController {
         }
         else if(mainPet.checkDeath()){
             killPet()
-            namePet()
         }
     }
     
@@ -82,12 +83,17 @@ class ViewController: UIViewController {
         }
         else if(mainPet.checkDeath()){
             killPet()
-            namePet()
         }
     }
     
     @IBAction func goOutPressed(_ sender: Any) {
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if(mainPet.petName == ""){
+            namePet()
+        }
     }
     
     override func viewDidLoad() {
@@ -99,9 +105,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        namePet()
-    }
     
 }
 
