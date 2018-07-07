@@ -17,6 +17,7 @@
 		5B843E1220EE61FC00A5B317 /* yourPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843E1120EE61FC00A5B317 /* yourPet.swift */; };
 		5BB8C05B20F138E2004A1739 /* action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8C05A20F138E2004A1739 /* action.swift */; };
 		5BB8C05D20F13A5A004A1739 /* place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8C05C20F13A5A004A1739 /* place.swift */; };
+		5BB8C05F20F13B02004A1739 /* town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8C05E20F13B02004A1739 /* town.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5B843E1120EE61FC00A5B317 /* yourPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourPet.swift; sourceTree = "<group>"; };
 		5BB8C05A20F138E2004A1739 /* action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = action.swift; sourceTree = "<group>"; };
 		5BB8C05C20F13A5A004A1739 /* place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = place.swift; sourceTree = "<group>"; };
+		5BB8C05E20F13B02004A1739 /* town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = town.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				5B843E1120EE61FC00A5B317 /* yourPet.swift */,
 				5BB8C05A20F138E2004A1739 /* action.swift */,
 				5BB8C05C20F13A5A004A1739 /* place.swift */,
+				5BB8C05E20F13B02004A1739 /* town.swift */,
 			);
 			path = newPet;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				5B843DE420ED4A7D00A5B317 /* AppDelegate.swift in Sources */,
 				5BB8C05D20F13A5A004A1739 /* place.swift in Sources */,
 				5B843E1220EE61FC00A5B317 /* yourPet.swift in Sources */,
+				5BB8C05F20F13B02004A1739 /* town.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
