@@ -84,10 +84,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Pet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwW-fi-7vz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwW-fi-7vz">
                                 <rect key="frame" x="62.666666666666657" y="20" width="289" height="52"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="289" id="Cua-yh-CvA"/>
+                                    <constraint firstAttribute="width" constant="289" id="Cua-yh-CvA" userLabel="width = 300"/>
                                     <constraint firstAttribute="height" constant="52" id="nE4-Dg-zm7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
