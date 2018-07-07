@@ -15,6 +15,8 @@
 		5B843DF920ED4A7E00A5B317 /* newPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843DF820ED4A7E00A5B317 /* newPetTests.swift */; };
 		5B843E0420ED4A7E00A5B317 /* newPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843E0320ED4A7E00A5B317 /* newPetUITests.swift */; };
 		5B843E1220EE61FC00A5B317 /* yourPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B843E1120EE61FC00A5B317 /* yourPet.swift */; };
+		5BB8C05B20F138E2004A1739 /* action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8C05A20F138E2004A1739 /* action.swift */; };
+		5BB8C05D20F13A5A004A1739 /* place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB8C05C20F13A5A004A1739 /* place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		5B843E0320ED4A7E00A5B317 /* newPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newPetUITests.swift; sourceTree = "<group>"; };
 		5B843E0520ED4A7E00A5B317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B843E1120EE61FC00A5B317 /* yourPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yourPet.swift; sourceTree = "<group>"; };
+		5BB8C05A20F138E2004A1739 /* action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = action.swift; sourceTree = "<group>"; };
+		5BB8C05C20F13A5A004A1739 /* place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				5B843DEC20ED4A7E00A5B317 /* LaunchScreen.storyboard */,
 				5B843DEF20ED4A7E00A5B317 /* Info.plist */,
 				5B843E1120EE61FC00A5B317 /* yourPet.swift */,
+				5BB8C05A20F138E2004A1739 /* action.swift */,
+				5BB8C05C20F13A5A004A1739 /* place.swift */,
 			);
 			path = newPet;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B843DE620ED4A7D00A5B317 /* ViewController.swift in Sources */,
+				5BB8C05B20F138E2004A1739 /* action.swift in Sources */,
 				5B843DE420ED4A7D00A5B317 /* AppDelegate.swift in Sources */,
+				5BB8C05D20F13A5A004A1739 /* place.swift in Sources */,
 				5B843E1220EE61FC00A5B317 /* yourPet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
