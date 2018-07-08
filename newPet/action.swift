@@ -20,9 +20,12 @@ class Action{
         }
     }
     func happEffectRandomizer(lowerBound: Int, upperBound: Int){
-        hungEffect = Int(Double(UInt32(arc4random_uniform(UInt32(upperBound))))/100.0)
-        if(hungEffect < lowerBound){
-            hungEffect = lowerBound
+        happEffect = Int(Double(UInt32(arc4random_uniform(UInt32(upperBound))))/100.0)
+        if(happEffect > 0 && lowerBound < 0){
+            happEffect *= -1
+        }
+        if(happEffect < lowerBound){
+            happEffect = lowerBound
         }
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class TownViewController: UIViewController {
-
+    var mainPet = yourPet()
     override func viewDidLoad() {
         super.viewDidLoad()
 
