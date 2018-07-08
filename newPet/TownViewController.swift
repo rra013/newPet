@@ -37,7 +37,14 @@ class TownViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ViewController
+        {
+            let vc = segue.destination as? ViewController
+            vc?.mainPet = self.mainPet
+        }
+    }
     /*
     // MARK: - Navigation
 

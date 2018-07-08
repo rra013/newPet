@@ -95,6 +95,7 @@ class ViewController: UIViewController {
             namePet()
         }
         nameLabel.frame.size.width = view.frame.size.width
+        nameLabel.text = mainPet.petName
     }
     
     override func viewDidLoad() {
