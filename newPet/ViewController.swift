@@ -96,6 +96,8 @@ class ViewController: UIViewController {
         }
         nameLabel.frame.size.width = view.frame.size.width
         nameLabel.text = mainPet.petName
+        hungerBar.setProgress(Float(mainPet.hungerFloat), animated: true)
+        happinessBar.setProgress(Float(mainPet.happinessFloat), animated: true)
     }
     
     override func viewDidLoad() {

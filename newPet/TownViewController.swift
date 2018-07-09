@@ -120,6 +120,8 @@ class TownViewController: UIViewController {
         for i in 0..<(buttonArray.count){
             buttonArray[i].setTitle(town.placesAccessible[i].name, for: .normal)
         }
+        hungerBar.setProgress(Float(mainPet.hungerFloat), animated: true)
+        happinessBar.setProgress(Float(mainPet.happinessFloat), animated: true)
     }
     
     override func didReceiveMemoryWarning() {

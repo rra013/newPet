@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EH1-p1-RO7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogSprite" translatesAutoresizingMaskIntoConstraints="NO" id="EH1-p1-RO7">
                                 <rect key="frame" x="82" y="172" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="kat-ju-gPC"/>
@@ -287,4 +287,7 @@
             <point key="canvasLocation" x="824.63768115942037" y="116.57608695652175"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dogSprite" width="30" height="30"/>
+    </resources>
 </document>
